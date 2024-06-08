@@ -1,0 +1,94 @@
+:root{
+    --clr_theme:rgb(87, 186, 253);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 37, 51);
+    min-height: 100vh
+}
+form{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding:3rem 2rem;
+    border-radius: 5px;
+    background-color: rgb(42, 45, 55);   
+}
+form .title{
+ color: white;
+ font-weight: 400;
+ text-transform: uppercase; 
+}
+form .input__box{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+form .input__box .placeholder{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  
+}
+form .input__box .placeholder span{
+    transition-duration: 0.2s;
+    position: relative;
+    color: gray;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    
+    top: 10px;
+}
+form .input__box input{
+ width: 100%;
+ height: 100%;
+ background-color: transparent;
+ border: none;
+ outline: none;
+ border-bottom: 1px solid gray;
+ color: white;
+ font-size:1rem
+}
+form .input__box input:focus,
+form .input__box input:valid{
+border-bottom-color: var(--clr_theme);
+}
+form .input__box input:focus + div span ,
+form .input__box input:valid + div span{
+ top: -16px;
+ font-size: 0.9rem;
+ color: var(--clr_theme);
+}
+form .submit__btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 1rem;
+    background-color: var(--clr_theme);
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 5px;
+}
+form .login{
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+form .login a{
+    color: var(--clr_theme);
+    text-decoration: none;
+} 
